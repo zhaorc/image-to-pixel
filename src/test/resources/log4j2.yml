@@ -1,0 +1,65 @@
+Configuration:
+  status: warn
+  monitorInterval: 30
+  Properties: # 定义全局变量
+    Property: # 缺省配置（用于开发环境）。其他环境需要在VM参数中指定，如下：
+      - name: log.level.console
+        value: INFO
+      - name: log.path
+        value: /export/Logs/
+      - name: file.name
+        value: ${hostName}
+      - name: log.pattern
+        value: "%d{yyyy-MM-dd HH:mm:ss.SSS}||%t||%-5level||%X{traceId}||%logger{1.}:%L||%msg%n"
+      - name: LOG_PREFIX
+        value: ${hostName}
+  Appenders:
+    Console:  #输出到控制台
+      name: CONSOLE
+      target: SYSTEM_OUT
+      PatternLayout:
+        pattern: ${log.pattern}
+    #   启动日志
+    RollingRandomAccessFile:
+      - name: ROLLING_FILE
+        fileName: ${log.path}/${file.name}.log
+        filePattern: "${log.path}/$${date:yyyy-MM}/${file.name}-%d{yyyy-MM-dd}-%i.log"
+        PatternLayout:
+          pattern: ${log.pattern}
+        Policies:
+          TimeBasedTriggeringPolicy:  # 按天分类
+            modulate: true
+            interval: 1
+          SizeBasedTriggeringPolicy:
+            size: 250 MB
+  Loggers:
+    logger:
+      - name: io.netty.channel.nio
+        level: ERROR
+        additivity: false
+        AppenderRef:
+          - ref: CONSOLE
+          - ref: ROLLING_FILE
+      - name: io.lettuce.core.protocol
+        level: ERROR
+        additivity: false
+        AppenderRef:
+          - ref: CONSOLE
+          - ref: ROLLING_FILE
+      - name: RocketmqClient
+        level: ERROR
+        additivity: false
+        AppenderRef:
+          - ref: CONSOLE
+          - ref: ROLLING_FILE
+      - name: com.ctrip.framework.apollo
+        level: ERROR
+        additivity: false
+        AppenderRef:
+          - ref: CONSOLE
+          - ref: ROLLING_FILE
+    Root:
+      level: ${log.level.console}
+      AppenderRef:
+        - ref: CONSOLE
+        - ref: ROLLING_FILE
