@@ -257,10 +257,7 @@ public class Image2Pixel {
             int col = i % pixelConfig.getPartsBoxX();
             partsBox.add(String.format("\"%s\":\"%s-%s\"", colorNameList.get(i), row + 1, col + 1));
         }
-        String line = "<script>var partsBoxMap = {" + Joiner.on(",").join(partsBox) + "};</script>";
-        //XXX
-        System.out.println(line);
-        return line;
+        return "<script>var partsBoxMap = {" + Joiner.on(",").join(partsBox) + "};</script>";
     }
 
     /**
@@ -408,8 +405,6 @@ public class Image2Pixel {
      * @throws Exception
      */
     private void writeTextFile(List<String> lineList, String filename) throws Exception {
-        //XXX
-        System.out.println(filename);
         try (BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(Files.newOutputStream(Paths.get(filename))))) {
             for (String line : lineList) {
                 writer.write(line);
@@ -418,39 +413,11 @@ public class Image2Pixel {
         }
     }
 
-//    /**
-//     * @param pixelConfig
-//     * @return
-//     * @throws Exception
-//     */
-//    private void loadCss(PixelConfig pixelConfig) throws Exception {
-//        int idx = pixelConfig.getFilename().lastIndexOf("/");
-//        String cssFilename = pixelConfig.getFilename().substring(0, idx) + "/web/color.css";
-//        try (BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(Files.newInputStream(Paths.get(cssFilename)), StandardCharsets.UTF_8))) {
-//            StringBuilder stringBuilder = new StringBuilder();
-//            String line = null;
-//            while ((line = bufferedReader.readLine()) != null) {
-//                stringBuilder.append(line);
-//                stringBuilder.append("\n");
-//            }
-//            //color
-//            for (Color color : pixelConfig.getColorList()) {
-//                stringBuilder.append(String.format(pixelConfig.getColorCssTpl(), color.getName(), color.getHex()));
-//            }
-//            pixelConfig.setCssText(stringBuilder.toString());
-//        }
-//    }
-
     /**
      * @param pixelConfig
      * @param lineList
      */
     private void addHeaderLinesToFile(PixelConfig pixelConfig, List<String> lineList) {
         lineList.addAll(pixelConfig.getHeaderLineList());
-//        lineList.add("<style>");
-//        lineList.add(pixelConfig.getCssText());
-//        lineList.add("</style>");
-//        lineList.add("</head>");
-//        lineList.add("<body>");
     }
 }

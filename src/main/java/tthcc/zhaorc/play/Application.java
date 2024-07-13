@@ -16,7 +16,9 @@ import java.util.Objects;
 public class Application {
 
     //    private final String filename = "c:/d_pan/my/pixel/001/origin_a.png";
-    private final String filename = "c:/d_pan/my/pixel/002/origin_b.jpg";
+    private final String filename = "c:/d_pan/my/pixel/002/tuye_a.jpg";
+//    private final String filename = "c:/d_pan/my/pixel/004/houzi.png";
+//    private final String filename = "c:/d_pan/my/pixel/006/longmao_a1.jpg";
 
     public static void main(String[] args) {
         Application application = new Application();
@@ -37,14 +39,29 @@ public class Application {
 //        pixelConfig.setMergeX(5);
 //        pixelConfig.setMergeY(5);
 
-
         // 002
-        pixelConfig.setOffsetLeft(99);
-        pixelConfig.setOffsetRight(99);
-        pixelConfig.setOffsetTop(2);
-        pixelConfig.setOffsetBottom(3);
-        pixelConfig.setMergeX(25);
-        pixelConfig.setMergeY(25);
+        pixelConfig.setOffsetLeft(0);
+        pixelConfig.setOffsetRight(0);
+        pixelConfig.setOffsetTop(0);
+        pixelConfig.setOffsetBottom(0);
+        pixelConfig.setMergeX(5);
+        pixelConfig.setMergeY(5);
+
+//        // 004
+//        pixelConfig.setOffsetLeft(0);
+//        pixelConfig.setOffsetRight(0);
+//        pixelConfig.setOffsetTop(0);
+//        pixelConfig.setOffsetBottom(0);
+//        pixelConfig.setMergeX(5);
+//        pixelConfig.setMergeY(5);
+
+//        // 006
+//        pixelConfig.setOffsetLeft(100);
+//        pixelConfig.setOffsetRight(40);
+//        pixelConfig.setOffsetTop(0);
+//        pixelConfig.setOffsetBottom(0);
+//        pixelConfig.setMergeX(5);
+//        pixelConfig.setMergeY(5);
 
         pixelConfig.setPageBlockSize(18);
         pixelConfig.setPaperBlocks(10);
