@@ -443,7 +443,7 @@ public class Image2Pixel {
         lineList.add(String.format(pixelConfig.getTitleTpl(), "价格：" + BigDecimal.valueOf(price).divide(BigDecimal.valueOf(100), 2, RoundingMode.HALF_UP)));
         lineList.add(pixelConfig.getPartsTableTpl());
         for (Map.Entry<String, List<String>> entry : packageMap.entrySet()) {
-            String line = entry.getKey() + "粒：" + Joiner.on(" ").join(entry.getValue());
+            String line = entry.getKey() + "粒（" + entry.getValue().size() + "）：" + Joiner.on(" ").join(entry.getValue());
             lineList.add("<tr>");
             lineList.add(String.format(pixelConfig.getPackageRowTpl(), line));
             lineList.add("</tr>");
