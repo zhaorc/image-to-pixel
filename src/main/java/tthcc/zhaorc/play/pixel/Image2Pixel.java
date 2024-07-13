@@ -12,6 +12,8 @@ import java.io.BufferedWriter;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.OutputStreamWriter;
+import java.math.BigDecimal;
+import java.math.RoundingMode;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.List;
@@ -354,6 +356,7 @@ public class Image2Pixel {
         partsLineList.add("<body>");
         partsLineList.add(String.format(String.format(pixelConfig.getIndexButtonTpl(), indexFilename)));
         partsLineList.add(String.format(pixelConfig.getTitleTpl(), "零件总数：" + total));
+        partsLineList.addAll(this.addToPackage(pixelConfig, colorList));
         partsLineList.addAll(this.makePartsFileLineList(pixelConfig, colorList));
         partsLineList.add("</body>");
 
@@ -386,10 +389,10 @@ public class Image2Pixel {
             lineList.add("</tr>");
             lineList.add("<tr>");
             for (int j = 0; j < pixelConfig.getPartsRowNum(); j++) {
-                String colorNum = "";
+                int colorNum = 0;
                 int index = i * pixelConfig.getPartsRowNum() + j;
                 if (index < nameList.size()) {
-                    colorNum = String.valueOf(colorMap.get(nameList.get(index)).size());
+                    colorNum = colorMap.get(nameList.get(index)).size();
                 }
                 lineList.add(String.format(pixelConfig.getPartsRowTpl(), colorNum));
             }
@@ -419,5 +422,56 @@ public class Image2Pixel {
      */
     private void addHeaderLinesToFile(PixelConfig pixelConfig, List<String> lineList) {
         lineList.addAll(pixelConfig.getHeaderLineList());
+    }
+
+    /**
+     * @param pixelConfig
+     * @param colorList
+     * @return
+     */
+    private List<String> addToPackage(PixelConfig pixelConfig, List<Color> colorList) {
+        Map<String, List<String>> packageMap = Maps.newHashMap();
+        Map<String, List<Color>> colorMap = colorList.stream().collect(Collectors.groupingBy(Color::getName));
+        for (Map.Entry<String, List<Color>> entry : colorMap.entrySet()) {
+            this.addToPackage(pixelConfig, entry.getKey(), entry.getValue().size(), packageMap);
+        }
+        int price = 0;
+        for (int i = 0; i < pixelConfig.getPackageName().length; i++) {
+            price += pixelConfig.getPackagePrice()[i] * packageMap.get(String.valueOf(pixelConfig.getPackageName()[i])).size();
+        }
+        List<String> lineList = Lists.newArrayList();
+        lineList.add(String.format(pixelConfig.getTitleTpl(), "价格：" + BigDecimal.valueOf(price).divide(BigDecimal.valueOf(100), 2, RoundingMode.HALF_UP)));
+        lineList.add(pixelConfig.getPartsTableTpl());
+        for (Map.Entry<String, List<String>> entry : packageMap.entrySet()) {
+            String line = entry.getKey() + "粒：" + Joiner.on(" ").join(entry.getValue());
+            lineList.add("<tr>");
+            lineList.add(String.format(pixelConfig.getPackageRowTpl(), line));
+            lineList.add("</tr>");
+        }
+        lineList.add("</table>");
+        return lineList;
+    }
+
+    /**
+     * @param pixelConfig
+     * @param colorName
+     * @param colorNum
+     * @param packageMap
+     */
+    private void addToPackage(PixelConfig pixelConfig, String colorName, int colorNum, Map<String, List<String>> packageMap) {
+        colorName = String.valueOf(Integer.parseInt(colorName));
+        int biggest = pixelConfig.getPackageName()[pixelConfig.getPackageName().length - 1];
+        for (int i = 0; i < pixelConfig.getPackagePrice().length; i++) {
+            if (colorNum <= pixelConfig.getPackageName()[i]) {
+                List<String> colorList = packageMap.computeIfAbsent(String.valueOf(pixelConfig.getPackageName()[i]), k -> Lists.newArrayList());
+                colorList.add(colorName);
+                break;
+            }
+        }
+        if (colorNum > biggest) {
+            List<String> colorList = packageMap.computeIfAbsent(String.valueOf(biggest), k -> Lists.newArrayList());
+            colorList.add(colorName);
+            this.addToPackage(pixelConfig, colorName, colorNum - biggest, packageMap);
+        }
     }
 }

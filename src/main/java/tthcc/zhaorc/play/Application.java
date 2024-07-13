@@ -20,12 +20,14 @@ public class Application {
 //    private final String filename = "c:/d_pan/my/pixel/004/houzi.png";
 //    private final String filename = "c:/d_pan/my/pixel/006/longmao_a1.jpg";
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
         Application application = new Application();
-        application.init();
+        PixelConfig pixelConfig = application.init();
+        Image2Pixel image2Pixel = new Image2Pixel();
+        image2Pixel.convertPixel(pixelConfig);
     }
 
-    private void init() {
+    private PixelConfig init() {
         //XXX
         log.info("start....,filename={}", filename);
         PixelConfig pixelConfig = new PixelConfig();
@@ -69,6 +71,9 @@ public class Application {
         pixelConfig.setMinColorNum(10);
         pixelConfig.setPartsBoxX(5);
         loadColorList(pixelConfig);
+        pixelConfig.setPackagePrice("200:4.20; 400:6.80; 1000:12.80");
+
+        return pixelConfig;
     }
 
     /**
@@ -84,8 +89,6 @@ public class Application {
                 String[] v = line.split(" ");
                 pixelConfig.addColor(new Color(v[0], v[1]));
             }
-            Image2Pixel image2Pixel = new Image2Pixel();
-            image2Pixel.convertPixel(pixelConfig);
         } catch (Exception exp) {
             log.error(exp.getMessage(), exp);
         }

@@ -37,11 +37,27 @@ public class PixelConfig {
     private int offsetTop;
     private int offsetBottom;
 
-    //    private String cssText;
+    private int[] packageName;
+    private int[] packagePrice;
+
     private List<Color> colorList = Lists.newArrayList();
 
     public void addColor(Color color) {
         colorList.add(color);
+    }
+
+    /**
+     * @param packageNamePrice
+     */
+    public void setPackagePrice(String packageNamePrice) {
+        String[] v = packageNamePrice.split(";");
+        packageName = new int[v.length];
+        packagePrice = new int[v.length];
+        for (int i = 0; i < v.length; i++) {
+            String[] pair = v[i].split(":");
+            packageName[i] = Integer.parseInt(pair[0].trim());
+            packagePrice[i] = Integer.parseInt(pair[1].trim().replace(".", ""));
+        }
     }
 
     private List<String> headerLineList = Lists.newArrayList(
@@ -88,5 +104,5 @@ public class PixelConfig {
     private String partsRowTpl = "<td class=\"parts_row_td\">%s</td>";
     private String partsColTpl = "<td class=\"parts_col_td\">%s</td>";
     private String titleTpl = "<h3 class=\"title\">%s</h3>";
-//    private String colorCssTpl = ".color_%s {background:#%s}\n";
+    private String packageRowTpl = "<td class=\"package_row_td\">%s</td>";
 }
