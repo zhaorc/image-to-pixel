@@ -1,263 +1,263 @@
-  120=#030303
-    0=#fdfdfd
-  WG9=#5b586c
-  WG8=#727274
-  WG7=#959595
-  WG6=#928495
-  WG5=#b3b2b3
-  WG4=#a7a6a7
-  WG3=#bdb1b5
-  WG2=#c5b8bc
-  WG1=#cecbde
- WG05=#dedede
-  109=#ece8e9
-  F37=#f7f7f7
-  CG9=#636481
-  CG8=#8b8995
-  CG7=#7f7b92
-  CG6=#8f96a4
-  CG5=#8192b0
-  CG4=#858585
-  CG3=#bbbbc0
-  CG2=#cfced2
-  CG1=#d4d2e0
- CG05=#e5ced6
-  138=#f5daf0
-  131=#f0cfdc
-  133=#ebccc6
-  135=#ddc5cd
-    F=#42404a
-  GG9=#7d838d
-  GG7=#7e8c9e
-  GG5=#949aa7
-  GG3=#c1c8ce
-  GG1=#cdcbe1
-  BG9=#868392
-  BG7=#6d6b78
-  BG5=#9dabc7
-  BG3=#bdbbc7
-  BG1=#d0daed
-   99=#594b46
-  F48=#766363
-  F36=#a2866b
-  373=#fefaf7
-  415=#f3e7eb
-  153=#f9e7dd
-  365=#fef0e6
-  370=#f8d9d4
-  218=#d9af98
-   95=#c4805b
-   96=#bb7d6e
-   92=#a7685c
-  F41=#b37364
-  F47=#8d685f
-  411=#8e5d52
-  412=#885345
-  102=#7b543e
-  413=#f1e6de
-  134=#dfd6b9
-   F3=#e3c798
-  F20=#e3c9a9
-  F19=#dfbca8
-  F32=#d7b987
-  F22=#d3a56d
-  F16=#c49b69
-   45=#c8b363
-   41=#c2a546
-  104=#be985a
-  169=#b9a05f
-  101=#cd8123
-  100=#734706
-  F11=#fbce9d
-  F30=#fcb981
-  F31=#fab168
-  F34=#f8a869
-  F29=#f69d5d
-  F33=#e69858
-  F28=#e49048
-  162=#c96426
-  410=#e5937d
-  417=#ce806a
-  107=#d1ac83
-  103=#ce9462
-  F23=#b05f32
-   98=#835868
-  F18=#f4e3c7
-  407=#f7dcca
-  F17=#f3c066
-  F27=#edbb74
-  F43=#dbaf94
-  F15=#d8a06a
-  416=#e5bb8a
-  F38=#f2c29e
-  F40=#e99f5e
-  F24=#f9ba7b
-  154=#fc944a
-  F25=#f19c68
-  F45=#da7f60
-   97=#e58f63
-   75=#e5e3f4
-   77=#e3ddfd
-  178=#e0dbfb
-   32=#d2caf9
-  145=#b8afe7
-   73=#6c53ae
-   82=#5c2398
-   84=#bd328a
-   85=#aa2395
-   86=#a31e88
-   87=#830a8a
-   81=#7b1693
-   82=#5e279b //
-   69=#52487b
-  F52=#e3e3e3
-   68=#4df7f6
-  179=#54ebed
-  144=#ace0f4
-  143=#bedbe1
-  182=#aaddf0
-  147=#a4e0f6
-  185=#b6ddfe
-  183=#6dacfb
-   76=#aab7e9
-   70=#0c97f5
-   74=#276bf5
-   71=#333da8
-   72=#1b2ac9
-  166=#e0ecde
-  171=#d0e9e1
-   67=#a0e7fc
-   66=#0edafb
-   63=#05d0f4
-   58=#16b9b9
-   65=#0d9ca5
-   54=#09a38f
-   57=#0d9b8e
-   53=#247474
-   50=#135d68
-   61=#0b8b95
-   64=#02748f
-   62=#3a6f98
-   16=#d9e695
-  124=#e2f771
-   59=#daeb81
-   48=#bed934
-   47=#8dcf57
-   46=#20b75a
-  172=#81ecc2
-  167=#96edc8
-   55=#46d8a9
-   56=#3ab889
-   52=#168d67
-   51=#1f6f56
-   42=#7e8164
-   43=#596654
-   38=#dee5aa
-   37=#fff870
-   49=#eed77a //
-   36=#f7d47a
-   34=#f9db0f
-   35=#f7d955
-   49=#efd06d
-   44=#e8c212
-   F7=#faca4b
-   F8=#fdbf38
-  F13=#c8c0a4
-  173=#e1e6ca
-  174=#ccd6b4
-  175=#adc194
- F151=#fef89e
-  123=#fff85f
-  124=#e3f772 //
-  164=#e5db95
-  141=#f0e4b7
-  142=#f9e8bb
-  F10=#fde2b9
-  F21=#f5e6aa
-  F50=#fbe1b0
-  F14=#fbe492
-   F5=#f4dd41
-   32=#fccd66 //
-   31=#fda416
-   33=#f4ab20
-  414=#fde9cf
-  152=#fbd9c4
-   20=#fdc58f
-  F42=#e69878
-  F49=#f8996d
-   F9=#f6c17d
-  F39=#faa883
-  375=#feaf7a
-  F26=#feaa54
-   21=#fc7f4b
-  122=#f9733e
-   22=#ea6f37
-   23=#f9780c
-   24=#f58725
-  374=#f9b5b0
-  139=#fdbcb3
-  209=#f9a392
-  140=#f8afa3
-  F44=#f1aba2
-  F70=#cb8d9a
-  F54=#e99996
-   94=#e76664
-  376=#eb6e66
-   93=#c8695a
-  F56=#dc6872
-  155=#b4595f
-  F46=#8f393f
-   91=#9b352f
-  196=#e9dde1
-  137=#ece0e4
-   26=#dcd8d9
-  136=#dccad0
-  360=#f7e8cb
-   29=#fae8d3
-   25=#f9eed0
-  360=#fae7ce //
-  132=#f9d1bd
-  366=#fccebf
-  367=#f8d5c3
-  369=#f9c6b1
-  371=#feb29e
-  361=#eeb4a1
-  198=#fce5f9
-  378=#f1e3f4
-  379=#f3ddfb
-   27=#eadbe0
-  F73=#fde0ea
-   28=#f5d2cc
-  356=#fbd9e6
-  357=#fad2e2
-  F53=#edc7d4
-   18=#eba1bc
-  F68=#fc9eae
-  F69=#fe9ab3
-  F74=#feafcb
-  147=#f3ace2 //
-  130=#fdd1e7
-  146=#f3cbee
-    9=#efadba
-    7=#f988a4
-   13=#f45b61
-   14=#fb6447
-   16=#fc626e //
-    6=#f645d6
-  126=#fe19e0
-  125=#fe00c5
-   88=#fc54bd
-  F71=#dd8bb9
-   17=#e58dc3
-   89=#f67ac7
-    8=#fe69a3
-  121=#fe4977
-   10=#ec0352
-   15=#ee1253
-   12=#f50123
-   11=#e9023b
-    5=#ef0151
-    4=#e23263
-    3=#fc3594
-    2=#df1b60
-    1=#971d27
+120,030303
+0,fdfdfd
+WG9,5b586c
+WG8,727274
+WG7,959595
+WG6,928495
+WG5,b3b2b3
+WG4,a7a6a7
+WG3,bdb1b5
+WG2,c5b8bc
+WG1,cecbde
+WG05,dedede
+109,ece8e9
+F37,f7f7f7
+CG9,636481
+CG8,8b8995
+CG7,7f7b92
+CG6,8f96a4
+CG5,8192b0
+CG4,858585
+CG3,bbbbc0
+CG2,cfced2
+CG1,d4d2e0
+CG05,e5ced6
+138,f5daf0
+131,f0cfdc
+133,ebccc6
+135,ddc5cd
+F,42404a
+GG9,7d838d
+GG7,7e8c9e
+GG5,949aa7
+GG3,c1c8ce
+GG1,cdcbe1
+BG9,868392
+BG7,6d6b78
+BG5,9dabc7
+BG3,bdbbc7
+BG1,d0daed
+99,594b46
+F48,766363
+F36,a2866b
+373,fefaf7
+415,f3e7eb
+153,f9e7dd
+365,fef0e6
+370,f8d9d4
+218,d9af98
+95,c4805b
+96,bb7d6e
+92,a7685c
+F41,b37364
+F47,8d685f
+411,8e5d52
+412,885345
+102,7b543e
+413,f1e6de
+134,dfd6b9
+F3,e3c798
+F20,e3c9a9
+F19,dfbca8
+F32,d7b987
+F22,d3a56d
+F16,c49b69
+45,c8b363
+41,c2a546
+104,be985a
+169,b9a05f
+101,cd8123
+100,734706
+F11,fbce9d
+F30,fcb981
+F31,fab168
+F34,f8a869
+F29,f69d5d
+F33,e69858
+F28,e49048
+162,c96426
+410,e5937d
+417,ce806a
+107,d1ac83
+103,ce9462
+F23,b05f32
+98,835868
+F18,f4e3c7
+407,f7dcca
+F17,f3c066
+F27,edbb74
+F43,dbaf94
+F15,d8a06a
+416,e5bb8a
+F38,f2c29e
+F40,e99f5e
+F24,f9ba7b
+154,fc944a
+F25,f19c68
+F45,da7f60
+97,e58f63
+75,e5e3f4
+77,e3ddfd
+178,e0dbfb
+32,d2caf9
+145,b8afe7
+73,6c53ae
+82,5c2398
+84,bd328a
+85,aa2395
+86,a31e88
+87,830a8a
+81,7b1693
+#82,5e279b
+69,52487b
+F52,e3e3e3
+68,4df7f6
+179,54ebed
+144,ace0f4
+143,bedbe1
+182,aaddf0
+147,a4e0f6
+185,b6ddfe
+183,6dacfb
+76,aab7e9
+70,0c97f5
+74,276bf5
+71,333da8
+72,1b2ac9
+166,e0ecde
+171,d0e9e1
+67,a0e7fc
+66,0edafb
+63,05d0f4
+58,16b9b9
+65,0d9ca5
+54,09a38f
+57,0d9b8e
+53,247474
+50,135d68
+61,0b8b95
+64,02748f
+62,3a6f98
+16,d9e695
+124,e2f771
+59,daeb81
+48,bed934
+47,8dcf57
+46,20b75a
+172,81ecc2
+167,96edc8
+55,46d8a9
+56,3ab889
+52,168d67
+51,1f6f56
+42,7e8164
+43,596654
+38,dee5aa
+37,fff870
+#49,eed77a
+36,f7d47a
+34,f9db0f
+35,f7d955
+49,efd06d
+44,e8c212
+F7,faca4b
+F8,fdbf38
+F13,c8c0a4
+173,e1e6ca
+174,ccd6b4
+175,adc194
+F151,fef89e
+123,fff85f
+#124,e3f772
+164,e5db95
+141,f0e4b7
+142,f9e8bb
+F10,fde2b9
+F21,f5e6aa
+F50,fbe1b0
+F14,fbe492
+F5,f4dd41
+#32,fccd66
+31,fda416
+33,f4ab20
+414,fde9cf
+152,fbd9c4
+20,fdc58f
+F42,e69878
+F49,f8996d
+F9,f6c17d
+F39,faa883
+375,feaf7a
+F26,feaa54
+21,fc7f4b
+122,f9733e
+22,ea6f37
+23,f9780c
+24,f58725
+374,f9b5b0
+139,fdbcb3
+209,f9a392
+140,f8afa3
+F44,f1aba2
+F70,cb8d9a
+F54,e99996
+94,e76664
+376,eb6e66
+93,c8695a
+F56,dc6872
+155,b4595f
+F46,8f393f
+91,9b352f
+196,e9dde1
+137,ece0e4
+26,dcd8d9
+136,dccad0
+360,f7e8cb
+29,fae8d3
+25,f9eed0
+#360,fae7ce
+132,f9d1bd
+366,fccebf
+367,f8d5c3
+369,f9c6b1
+371,feb29e
+361,eeb4a1
+198,fce5f9
+378,f1e3f4
+379,f3ddfb
+27,eadbe0
+F73,fde0ea
+28,f5d2cc
+356,fbd9e6
+357,fad2e2
+F53,edc7d4
+18,eba1bc
+F68,fc9eae
+F69,fe9ab3
+F74,feafcb
+#147,f3ace2
+130,fdd1e7
+146,f3cbee
+9,efadba
+7,f988a4
+13,f45b61
+14,fb6447
+#16,fc626e
+6,f645d6
+126,fe19e0
+125,fe00c5
+88,fc54bd
+F71,dd8bb9
+17,e58dc3
+89,f67ac7
+8,fe69a3
+121,fe4977
+10,ec0352
+15,ee1253
+12,f50123
+11,e9023b
+5,ef0151
+4,e23263
+3,fc3594
+2,df1b60
+1,971d27
