@@ -16,9 +16,10 @@ import java.util.Objects;
 public class Application {
 
     //    private final String filename = "c:/d_pan/my/pixel/001/origin_a.png";
-    private final String filename = "c:/d_pan/my/pixel/002/tuye_a.jpg";
+//    private final String filename = "c:/d_pan/my/pixel/002/tuye_a.jpg";
 //    private final String filename = "c:/d_pan/my/pixel/004/houzi.png";
-//    private final String filename = "c:/d_pan/my/pixel/006/longmao_a1.jpg";
+    private final String filename = "d:/my/pixel/006/longmao_a.jpg";
+//    private final String filename = "d:/my/pixel/009/bicycle_a.jpg";
 
     public static void main(String[] args) throws Exception {
         Application application = new Application();
@@ -41,13 +42,13 @@ public class Application {
 //        pixelConfig.setMergeX(5);
 //        pixelConfig.setMergeY(5);
 
-        // 002
-        pixelConfig.setOffsetLeft(0);
-        pixelConfig.setOffsetRight(0);
-        pixelConfig.setOffsetTop(0);
-        pixelConfig.setOffsetBottom(0);
-        pixelConfig.setMergeX(5);
-        pixelConfig.setMergeY(5);
+//        // 002
+//        pixelConfig.setOffsetLeft(0);
+//        pixelConfig.setOffsetRight(0);
+//        pixelConfig.setOffsetTop(0);
+//        pixelConfig.setOffsetBottom(0);
+//        pixelConfig.setMergeX(5);
+//        pixelConfig.setMergeY(5);
 
 //        // 004
 //        pixelConfig.setOffsetLeft(0);
@@ -57,9 +58,17 @@ public class Application {
 //        pixelConfig.setMergeX(5);
 //        pixelConfig.setMergeY(5);
 
-//        // 006
-//        pixelConfig.setOffsetLeft(100);
-//        pixelConfig.setOffsetRight(40);
+        // 006
+        pixelConfig.setOffsetLeft(100);
+        pixelConfig.setOffsetRight(40);
+        pixelConfig.setOffsetTop(0);
+        pixelConfig.setOffsetBottom(0);
+        pixelConfig.setMergeX(3);
+        pixelConfig.setMergeY(3);
+
+//        // 007
+//        pixelConfig.setOffsetLeft(0);
+//        pixelConfig.setOffsetRight(0);
 //        pixelConfig.setOffsetTop(0);
 //        pixelConfig.setOffsetBottom(0);
 //        pixelConfig.setMergeX(5);
@@ -70,6 +79,7 @@ public class Application {
         pixelConfig.setPartsRowNum(7);
         pixelConfig.setMinColorNum(10);
         pixelConfig.setPartsBoxX(5);
+
         loadColorList(pixelConfig);
         pixelConfig.setPackagePrice("200:4.20; 400:6.80; 1000:12.80");
 
