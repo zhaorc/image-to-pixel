@@ -90,7 +90,7 @@ public class Application {
      * @param pixelConfig
      */
     private void loadColorList(BlockConfig pixelConfig) {
-        try (BufferedReader reader = new BufferedReader(new InputStreamReader(Objects.requireNonNull(this.getClass().getResourceAsStream("/color_list.txt"))))) {
+        try (BufferedReader reader = new BufferedReader(new InputStreamReader(Objects.requireNonNull(this.getClass().getResourceAsStream("/color_list_lego.txt"))))) {
             String line = null;
             while ((line = reader.readLine()) != null) {
                 if (line.charAt(0) == '#') {
