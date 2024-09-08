@@ -1,9 +1,9 @@
 package tthcc.zhaorc.play;
 
 import lombok.extern.slf4j.Slf4j;
+import tthcc.zhaorc.play.pixel.BlockConfig;
 import tthcc.zhaorc.play.pixel.Color;
 import tthcc.zhaorc.play.pixel.Image2Pixel;
-import tthcc.zhaorc.play.pixel.PixelConfig;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
@@ -23,16 +23,16 @@ public class Application {
 
     public static void main(String[] args) throws Exception {
         Application application = new Application();
-        PixelConfig pixelConfig = application.init();
+        BlockConfig blockConfig = application.init();
         Image2Pixel image2Pixel = new Image2Pixel();
-        image2Pixel.convertPixel(pixelConfig);
+        image2Pixel.convertPixel(blockConfig);
     }
 
-    private PixelConfig init() {
+    private BlockConfig init() {
         //XXX
         log.info("start....,filename={}", filename);
-        PixelConfig pixelConfig = new PixelConfig();
-        pixelConfig.setFilename(filename);
+        BlockConfig blockConfig = new BlockConfig();
+        blockConfig.setFilename(filename);
 
 //        // 001
 //        pixelConfig.setOffsetLeft(0);
@@ -59,12 +59,12 @@ public class Application {
 //        pixelConfig.setMergeY(5);
 
         // 006
-        pixelConfig.setOffsetLeft(100);
-        pixelConfig.setOffsetRight(40);
-        pixelConfig.setOffsetTop(0);
-        pixelConfig.setOffsetBottom(0);
-        pixelConfig.setMergeX(3);
-        pixelConfig.setMergeY(3);
+        blockConfig.setOffsetLeft(100);
+        blockConfig.setOffsetRight(40);
+        blockConfig.setOffsetTop(0);
+        blockConfig.setOffsetBottom(0);
+        blockConfig.setMergeX(3);
+        blockConfig.setMergeY(3);
 
 //        // 007
 //        pixelConfig.setOffsetLeft(0);
@@ -74,22 +74,22 @@ public class Application {
 //        pixelConfig.setMergeX(5);
 //        pixelConfig.setMergeY(5);
 
-        pixelConfig.setPageBlockSize(18);
-        pixelConfig.setPaperBlocks(10);
-        pixelConfig.setPartsRowNum(7);
-        pixelConfig.setMinColorNum(10);
-        pixelConfig.setPartsBoxX(5);
+        blockConfig.setPageBlockSize(18);
+        blockConfig.setPaperBlocks(10);
+        blockConfig.setPartsRowNum(7);
+        blockConfig.setMinColorNum(10);
+        blockConfig.setPartsBoxX(5);
 
-        loadColorList(pixelConfig);
-        pixelConfig.setPackagePrice("200:4.20; 400:6.80; 1000:12.80");
+        loadColorList(blockConfig);
+        blockConfig.setPackagePrice("200:4.20; 400:6.80; 1000:12.80");
 
-        return pixelConfig;
+        return blockConfig;
     }
 
     /**
      * @param pixelConfig
      */
-    private void loadColorList(PixelConfig pixelConfig) {
+    private void loadColorList(BlockConfig pixelConfig) {
         try (BufferedReader reader = new BufferedReader(new InputStreamReader(Objects.requireNonNull(this.getClass().getResourceAsStream("/color_list.txt"))))) {
             String line = null;
             while ((line = reader.readLine()) != null) {
