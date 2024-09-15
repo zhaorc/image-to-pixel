@@ -1,9 +1,7 @@
 package tthcc.zhaorc.play;
 
 import lombok.extern.slf4j.Slf4j;
-import tthcc.zhaorc.play.pixel.BlockConfig;
-import tthcc.zhaorc.play.pixel.Color;
-import tthcc.zhaorc.play.pixel.Image2Pixel;
+import tthcc.zhaorc.play.pixel.*;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
@@ -15,20 +13,60 @@ import java.util.Objects;
 @Slf4j
 public class Application {
 
-    //    private final String filename = "c:/d_pan/my/pixel/001/origin_a.png";
-//    private final String filename = "c:/d_pan/my/pixel/002/tuye_a.jpg";
-//    private final String filename = "c:/d_pan/my/pixel/004/houzi.png";
-    private final String filename = "d:/my/pixel/006/longmao_a.jpg";
-//    private final String filename = "d:/my/pixel/009/bicycle_a.jpg";
-
+    /**
+     * @param args
+     * @throws Exception
+     */
     public static void main(String[] args) throws Exception {
         Application application = new Application();
-        BlockConfig blockConfig = application.init();
+
+//        BlockConfig pixelConfig = application.configBlock();
+
+        MarkConfig pixelConfig = application.configMark();
+
         Image2Pixel image2Pixel = new Image2Pixel();
-        image2Pixel.convertPixel(blockConfig);
+        image2Pixel.convertPixel(pixelConfig);
     }
 
-    private BlockConfig init() {
+    /**
+     * @return
+     */
+    private MarkConfig configMark() {
+        // 580 x 420
+
+        String filename = "c:/d_pan/my/pixel/008/longmao.png";
+
+        //XXX
+        log.info("start....,filename={}", filename);
+        MarkConfig markConfig = new MarkConfig();
+        markConfig.setFilename(filename);
+
+        markConfig.setOffsetLeft(235);
+        markConfig.setOffsetRight(236);
+        markConfig.setOffsetTop(15);
+        markConfig.setOffsetBottom(15);
+        markConfig.setMergeX(5);
+        markConfig.setMergeY(5);
+
+        markConfig.setPageBlockSize(18);
+        markConfig.setPaperBlocks(10);
+
+        loadColorList(markConfig);
+
+        return markConfig;
+    }
+
+    /**
+     * @return
+     */
+    private BlockConfig configBlock() {
+//     String filename = "c:/d_pan/my/pixel/001/origin_a.png";
+//    String filename = "c:/d_pan/my/pixel/002/tuye_a.jpg";
+        String filename = "c:/d_pan/my/pixel/004/houzi.png";
+//    String filename = "d:/my/pixel/006/longmao_a.jpg";
+//    String filename = "d:/my/pixel/009/bicycle_a.jpg";
+
+
         //XXX
         log.info("start....,filename={}", filename);
         BlockConfig blockConfig = new BlockConfig();
@@ -89,8 +127,8 @@ public class Application {
     /**
      * @param pixelConfig
      */
-    private void loadColorList(BlockConfig pixelConfig) {
-        try (BufferedReader reader = new BufferedReader(new InputStreamReader(Objects.requireNonNull(this.getClass().getResourceAsStream("/color_list_lego.txt"))))) {
+    private void loadColorList(PixelConfig pixelConfig) {
+        try (BufferedReader reader = new BufferedReader(new InputStreamReader(Objects.requireNonNull(this.getClass().getResourceAsStream(pixelConfig.getColorFilename()))))) {
             String line = null;
             while ((line = reader.readLine()) != null) {
                 if (line.charAt(0) == '#') {
