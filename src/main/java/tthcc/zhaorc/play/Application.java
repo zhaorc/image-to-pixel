@@ -34,23 +34,32 @@ public class Application {
     private MarkConfig configMark() {
         // 580 x 420
 
-        String filename = "c:/d_pan/my/pixel/008/longmao.png";
+//        String filename = "c:/d_pan/my/pixel/008/longmao.png";
+        String filename = "c:/d_pan/my/pixel/009/dl250_a.jpg";
 
         //XXX
         log.info("start....,filename={}", filename);
         MarkConfig markConfig = new MarkConfig();
         markConfig.setFilename(filename);
 
-        markConfig.setOffsetLeft(235);
-        markConfig.setOffsetRight(236);
-        markConfig.setOffsetTop(15);
-        markConfig.setOffsetBottom(15);
-        markConfig.setMergeX(5);
-        markConfig.setMergeY(5);
+//        //008
+//        markConfig.setOffsetLeft(235);
+//        markConfig.setOffsetRight(236);
+//        markConfig.setOffsetTop(15);
+//        markConfig.setOffsetBottom(15);
+//        markConfig.setMergeX(5);
+//        markConfig.setMergeY(5);
+
+        //009
+        markConfig.setOffsetLeft(0);
+        markConfig.setOffsetRight(0);
+        markConfig.setOffsetTop(18);
+        markConfig.setOffsetBottom(0);
+        markConfig.setMergeX(3);
+        markConfig.setMergeY(3);
 
         markConfig.setPageBlockSize(18);
         markConfig.setPaperBlocks(10);
-
         loadColorList(markConfig);
 
         return markConfig;

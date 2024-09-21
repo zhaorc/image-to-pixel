@@ -64,12 +64,12 @@ public abstract class PixelConfig {
             "<title>啊哈哈</title>",
             "<meta charset=\"utf-8\">",
             "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">",
-//            "<link rel=\"stylesheet\" href=\"../../color2.css?v=0012\"/>",
-//            "<script src=\"../../jquery-3.7.1.min.js\"></script>",
-//            "<script src=\"../../pixel-app.js?v=0015\"></script>"
-            "<link rel=\"stylesheet\" href=\"/pixel/color2.css?v=0012\"/>",
-            "<script src=\"/pixel/jquery-3.7.1.min.js\"></script>",
-            "<script src=\"/pixel/pixel-app.js?v=0015\"></script>"
+            "<link rel=\"stylesheet\" href=\"../../color2.css?v=0012\"/>",
+            "<script src=\"../../jquery-3.7.1.min.js\"></script>",
+            "<script src=\"../../pixel-app.js?v=0015\"></script>"
+//            "<link rel=\"stylesheet\" href=\"/pixel/color2.css?v=0012\"/>",
+//            "<script src=\"/pixel/jquery-3.7.1.min.js\"></script>",
+//            "<script src=\"/pixel/pixel-app.js?v=0015\"></script>"
     );
 
     private String actionTableTpl =
@@ -91,7 +91,6 @@ public abstract class PixelConfig {
     private String indexTdTpl = "<tr><td class=\"index_td\"><a href=\"%s\">%s</a></td></tr>";
     private String pixelTableTpl = "<table class=\"%s\">";
     private String pixelTdTpl = "<td class=\"color_%s\"></td>";
-    //    private String blockTdTpl = "<td class=\"block color_%s\"></td>";
     private String pageTdTpl = "<td class=\"paper_td\">%s</td>";
     private String pageRowTpl = "<td class=\"row_td\">%s</td>";
     private String pageColTpl = "<td class=\"col_td\">%s</td>";

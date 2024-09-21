@@ -21,7 +21,8 @@ public class MarkConfig extends PixelConfig {
     //零件盒每行个数
     private int partsRowNum = 0;
     //颜色表
-    private String colorFilename = "/color_list_mark.txt";
+//    private String colorFilename = "/color_list_mark.txt";
+    private String colorFilename = "/color_list_mark2.txt";
 
     private String pixelTdTpl = "<td class=\"block mark_td mark_%s\"></td>";
 }
