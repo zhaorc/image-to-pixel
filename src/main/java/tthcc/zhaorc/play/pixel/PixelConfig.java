@@ -64,9 +64,9 @@ public abstract class PixelConfig {
             "<title>啊哈哈</title>",
             "<meta charset=\"utf-8\">",
             "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">",
-            "<link rel=\"stylesheet\" href=\"../color2.css?v=0017\"/>",
+            "<link rel=\"stylesheet\" href=\"../color2.css?v=0020\"/>",
             "<script src=\"../jquery-3.7.1.min.js\"></script>",
-            "<script src=\"../pixel-app.js?v=0017\"></script>"
+            "<script src=\"../pixel-app.js?v=0020\"></script>"
 //            "<link rel=\"stylesheet\" href=\"/pixel/color2.css?v=0016\"/>",
 //            "<script src=\"/pixel/jquery-3.7.1.min.js\"></script>",
 //            "<script src=\"/pixel/pixel-app.js?v=0016\"></script>"
